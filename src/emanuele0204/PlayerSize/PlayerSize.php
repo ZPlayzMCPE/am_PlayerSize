@@ -35,7 +35,7 @@ class pSize extends Command{
     public function execute(CommandSender $g, $label, array $args){
         if($g->hasPermission("emanuele0204.size")){
             if(isset($args[0])){
-                if(is_numeric($args[0]) && $args < 20){
+                if(is_numeric($args[0])){
                     $this->p->b[$g->getName()] = $args[0];
                     $g->setDataProperty(Entity::DATA_SCALE, Entity::DATA_TYPE_FLOAT, $args[0]);
                     $g->sendMessage("§8» §fSize cambiata in §e".$args[0]." §f!");
@@ -48,11 +48,12 @@ class pSize extends Command{
                         $g->sendMessage("§8» §cSize non valida");
                     }
                 }else{
-                        $g->sendMessage("§8» §c/size §a1-20 §7=> §fImposta una size");
-                        $g->sendMessage("§8» §c/size §areset §7=> §fFai tornare normale la tua size");
-                        $g->sendMessage("§8» §c/size §ahelp §7=> §fVisualizza questo menù");
+                    $g->sendMessage("§8» §9Comando errato! Usa:");              
+                    $g->sendMessage("§8» §c/size §91-20 §f=> §ePer settare una size tra 1 e 20");
+                    $g->sendMessage("§8» §c/size §9reset §f=> §ePer resettare la tua size");
+                    $g->sendMessage("§8» §c/size §9help §f=> §ePer visualizzare questo menù");
                 }
             }
-          }
         }
-      }
+    }
+}

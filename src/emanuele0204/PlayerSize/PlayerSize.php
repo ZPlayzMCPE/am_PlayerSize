@@ -43,7 +43,7 @@ class pSize extends Command{
                 }elseif($args[0] == "reset"){
                     if(!empty($this->p->b[$g->getName()])){
                         unset($this->p->b[$g->getName()]);
-                        $g->setDataProperty(Entity::DATA_SCALE, Entity::DATA_TYPE_FLOAT, 1);
+                        $g->setDataProperty(Entity::DATA_SCALE, Entity::DATA_TYPE_FLOAT, 1.0);
                         $g->sendMessage("§8» §aGrandezza ritornata normale!");
                     }else{
                         $g->sendMessage("§8» §cUsa §f/size §ereset §coppure §f/size §e<size>");

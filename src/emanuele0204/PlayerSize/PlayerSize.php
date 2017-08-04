@@ -11,7 +11,7 @@ class PlayerSize extends PluginBase{
     
     public $b = array();
     public function onEnable(){
-        $this->getLogger()->info("§8» §ePlayerSize attivo");
+        $this->getLogger()->info("§8» §ePlayerSize active");
         $this->getServer()->getCommandMap()->register("size", new pSize($this));
     }
     
@@ -39,17 +39,17 @@ class pSize extends Command{
                   if ($args[0] >= 0 && $args[0] <= 20) {
                     $this->p->b[$g->getName()] = $args[0];
                     $g->setDataProperty(Entity::DATA_SCALE, Entity::DATA_TYPE_FLOAT, $args[0]);
-                    $g->sendMessage("§8» §fSize cambiata in §e".$args[0]." §f!");
+                    $g->sendMessage("§8» §fSize changed in §e".$args[0]." §f!");
                 }elseif($args[0] == "reset"){
                     if(!empty($this->p->b[$g->getName()])){
                         unset($this->p->b[$g->getName()]);
                         $g->setDataProperty(Entity::DATA_SCALE, Entity::DATA_TYPE_FLOAT, 1.0);
-                        $g->sendMessage("§8» §aGrandezza ritornata normale!");
+                        $g->sendMessage("§8» §aNormal return size!");
                     }else{
-                        $g->sendMessage("§8» §cUsa §f/size §ereset §coppure §f/size §e<size>");
+                        $g->sendMessage("§8» §cUsa §f/size §ereset §cor §f/size §e<size>");
                     }
                 }else{
-                    $g->sendMessage("§8» §eLa grandezza deve essere tra f0 §ee §f20 ");
+                    $g->sendMessage("§8» §eThe magnitude must be between f0 §ee §f20 ");
                }
             }
          }

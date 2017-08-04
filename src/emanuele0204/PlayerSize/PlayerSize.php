@@ -46,10 +46,10 @@ class pSize extends Command{
                         $g->setDataProperty(Entity::DATA_SCALE, Entity::DATA_TYPE_FLOAT, 1.0);
                         $g->sendMessage("§8» §aNormal return size!");
                     }else{
-                        $g->sendMessage("§8» §cUsa §f/size §ereset §cor §f/size §e<size>");
+                        $g->sendMessage("§8» §cUse §f/size §ereset §cor §f/size §e<size>");
                     }
                 }else{
-                    $g->sendMessage("§8» §eThe magnitude must be between f0.5 §and §f5 ");
+                    $g->sendMessage("§8» §eThe size must be between §50.5 §aand §65 ");
                }
             }
          }

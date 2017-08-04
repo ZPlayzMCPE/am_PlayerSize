@@ -1,5 +1,5 @@
-name: am_PlayerSize
-author: emanuele0204
+name: PlayerSizer
+author: Zeao
 api: [3.0.0-ALPHA7, 3.0.1]
 main: emanuele0204\PlayerSize\PlayerSize
 version: 1.0

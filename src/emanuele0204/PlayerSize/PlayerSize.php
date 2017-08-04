@@ -36,7 +36,7 @@ class pSize extends Command{
         if($g->hasPermission("playersize.size")){
             if(isset($args[0])){
                 if(is_numeric($args[0])){
-                  if ($args[0] >= 0 && $args[0] <= 20) {
+                  if ($args[0] >= 0.5 && $args[0] <= 5) {
                     $this->p->b[$g->getName()] = $args[0];
                     $g->setDataProperty(Entity::DATA_SCALE, Entity::DATA_TYPE_FLOAT, $args[0]);
                     $g->sendMessage("§8» §fSize changed in §e".$args[0]." §f!");
@@ -49,7 +49,7 @@ class pSize extends Command{
                         $g->sendMessage("§8» §cUsa §f/size §ereset §cor §f/size §e<size>");
                     }
                 }else{
-                    $g->sendMessage("§8» §eThe magnitude must be between f0 §ee §f20 ");
+                    $g->sendMessage("§8» §eThe magnitude must be between f0.5 §and §f5 ");
                }
             }
          }

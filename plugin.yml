@@ -11,3 +11,6 @@ permissions:
     children:
      playersize.command.size:
       default: op
+      children:
+      playersize.size
+      default: op

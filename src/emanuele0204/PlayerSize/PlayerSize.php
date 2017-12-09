@@ -11,7 +11,7 @@ class PlayerSize extends PluginBase{
     
     public $b = array();
     public function onEnable(){
-        $this->getLogger()->info("§8» §ePlayerSize active");
+        $this->getLogger()->info("§8» §ePlayerSize active, loaded.");
         $this->getServer()->getCommandMap()->register("size", new pSize($this));
     }
     
@@ -29,17 +29,17 @@ class pSize extends Command{
     private $p;
     public function __construct($plugin){
         $this->p = $plugin;
-        parent::__construct("size", "PlayerSize by emanuele0204");
+        parent::__construct("size", "§aPlayerSize by §bVMPE development Team\n§d§l>>>>> §aPlayerSize §Help Page §d§l<<<<<\n§r&a/size <0.5-5> - §bChange your player size.\n§a/size reset - §bResets the size, and is all back to normal.");
     }
     
-    public function execute(CommandSender $g, $label, array $args){
+    public function execute(CommandSender $g, string $label, array $args){
         if($g->hasPermission("playersize.size")){
             if(isset($args[0])){
                 if(is_numeric($args[0])){
                   if ($args[0] >= 0.5 && $args[0] <= 5) {
                     $this->p->b[$g->getName()] = $args[0];
                     $g->setDataProperty(Entity::DATA_SCALE, Entity::DATA_TYPE_FLOAT, $args[0]);
-                    $g->sendMessage("§8» §fSize changed in §e".$args[0]." §f!");
+                    $g->sendMessage("§8» §aSize changed in §2".$args[0]." §aSuccesfully! §bCheck you out! :)");
                 }elseif($args[0] == "reset"){
                     if(!empty($this->p->b[$g->getName()])){
                         unset($this->p->b[$g->getName()]);
@@ -49,7 +49,7 @@ class pSize extends Command{
                         $g->sendMessage("§8» §cUse §f/size §ereset §cor §f/size §e<size>");
                     }
                 }else{
-                    $g->sendMessage("§8» §eThe size must be between §50.5 §aand §65 ");
+                    $g->sendMessage("§8» §cI'm sorry, but the size must be between §40.5 §cnd §45. (0.5 = Small) (1 = Normal) (5 = Big)");
                }
             }
          }

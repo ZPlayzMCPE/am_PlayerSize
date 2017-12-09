@@ -1,8 +1,8 @@
 name: PlayerSizer
 author: Zeao
-api: [3.0.0-ALPHA7, 3.0.1]
+api: [3.0.0-ALPHA9, 3.0.0-ALPHA10]
 main: emanuele0204\PlayerSize\PlayerSize
-version: 1.0
+version: 1.2.6
 
 permissions:
  playersize:

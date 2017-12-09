@@ -1,7 +1,7 @@
 --- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/ZPlayzMCPE/am_PlayerSize
 branches:
-- master
+- patch-2
 projects:
-  am_PlayerSize:
+  PlayerSize:
     path: ""
 ...

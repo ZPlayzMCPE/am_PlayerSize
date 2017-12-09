@@ -1,8 +1,8 @@
 # am_PlayerSize
 
-Comandi:
+Comands:
 
-/size <1-20>
+/size <0.5-5>
 
 /size reset
 

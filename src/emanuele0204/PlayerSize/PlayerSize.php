@@ -24,7 +24,7 @@ class PlayerSize extends PluginBase{
     }
 }
 
-class pSize extends Command{
+class PlayerSize extends Command{
     
     private $p;
     public function __construct($plugin){
